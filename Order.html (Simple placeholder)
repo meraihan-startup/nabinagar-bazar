@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order – Nabinagar Bazar</title>
+<style>
+body { font-family: Arial, sans-serif; background: #f7f7f7; margin:0; display:flex; justify-content:center; align-items:center; height:100vh; }
+.box { background: #fff; padding: 20px; border-radius: 8px; width: 320px; box-shadow: 0 2px 6px rgba(0,0,0,.1); }
+h3 { text-align:center; }
+input, textarea { width:100%; padding:10px; margin-top:10px; border-radius:6px; border:1px solid #ccc; }
+button { width:100%; padding:10px; margin-top:12px; border:none; border-radius:6px; background:#0a7d3b; color:#fff; font-size:16px; cursor:pointer; }
+</style>
+</head>
+<body>
+
+<div class="box">
+  <h3>Place Your Order / অর্ডার করুন</h3>
+  <input type="text" placeholder="Full Name / নাম" />
+  <input type="tel" placeholder="Phone / ফোন" />
+  <textarea placeholder="Delivery Address / ঠিকানা" rows="3"></textarea>
+  <p>Payment: Cash on Delivery / ক্যাশ অন ডেলিভারি</p>
+  <button>Confirm Order / অর্ডার নিশ্চিত করুন</button>
+</div>
+
+</body>
+</html>
