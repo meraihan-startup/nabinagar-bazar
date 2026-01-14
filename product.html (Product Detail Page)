@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Product – Nabinagar Bazar</title>
+<style>
+body{margin:0;font-family:Arial;background:#f7f7f7;}
+header{background:#fff;padding:12px;box-shadow:0 2px 6px rgba(0,0,0,.08);}
+.gallery{height:260px;background:#ddd;}
+.content{background:#fff;padding:16px;}
+.price{font-size:22px;font-weight:bold;}
+.seller{background:#f1f1f1;padding:12px;border-radius:8px;margin-top:16px;}
+.order{position:fixed;bottom:0;left:0;right:0;background:#0a7d3b;color:#fff;text-align:center;padding:14px;font-size:18px;}
+</style>
+</head>
+<body>
+
+<header><a href="index.html">← Back</a></header>
+<div class="gallery"></div>
+
+<div class="content">
+<h2>Men Casual Shirt</h2>
+<div class="price">৳850</div>
+<p><b>Material/ কাপড়:</b> Cotton<br><b>Size:</b> XS, S, M, L, XL, XXL</p>
+<p>Comfortable daily wear shirt.</p>
+
+<div class="seller">
+<b>Store:</b> <a href="store.html"> Bhai Bhai Fashion</a><br>
+<small>Nabinagar, Brahmanbaria</small>
+</div>
+</div>
+
+<div class="order"><div class="order">
+  <a href="order.html" style="color:#fff; text-decoration:none;">Order Now | অর্ডার করুন</a>
+</div></div>
+</body>
+</html>
