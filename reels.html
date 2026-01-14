@@ -4,53 +4,148 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Reels – Nabinagar Bazar</title>
+
 <style>
-body{margin:0;font-family:Arial;background:#f6f6f6}
-header{padding:16px;text-align:center;background:#0a7d3b;color:#fff}
-.reels-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-  gap:12px;
-  padding:16px;
-  max-width:1200px;
-  margin:0 auto;
-}
-.reel-card video{
-  width:100%;
-  aspect-ratio:9/16;
-  object-fit:cover;
-  border-radius:12px;
+body{
+  margin:0;
   background:#000;
+  overflow:hidden;
+  font-family:Arial;
+}
+
+.reels-container{
+  height:100vh;
+  overflow-y:scroll;
+  scroll-snap-type:y mandatory;
+}
+
+.reel{
+  height:100vh;
+  scroll-snap-align:start;
+  position:relative;
+}
+
+.reel video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
 </style>
 </head>
-<body>
-<header>
-<h2>Trending Reels 🎬</h2>
-<p>সব দোকানের ভিডিও এক জায়গায়</p>
-</header>
 
-<div class="reels-grid">
-  <div class="reel-card"><video controls muted loop playsinline src="videos/reel1.mp4"></video></div>
-  <div class="reel-card"><video controls muted loop playsinline src="videos/reel2.mp4"></video></div>
-  <div class="reel-card"><video controls muted loop playsinline src="videos/reel3.mp4"></video></div>
-  <div class="reel-card"><video controls muted loop playsinline src="videos/reel4.mp4"></video></div>
-    <div class="reel-card"><video controls muted loop playsinline src="videos/reel5.mp4"></video></div>
-  <div class="reel-card"><video controls muted loop playsinline src="videos/reel6.mp4"></video></div>
-  <div class="reel-card"><video controls muted loop playsinline src="videos/reel7.mp4"></video></div>
-  <div class="reel-card"><video controls muted loop playsinline src="videos/reel8.mp4"></video></div>
-    <div class="reel-card"><video controls muted loop playsinline src="videos/reel9.mp4"></video></div>
-  <div class="reel-card"><video controls muted loop playsinline src="videos/reel10.mp4"></video></div>
-  <div class="reel-card"><video controls muted loop playsinline src="videos/reel11.mp4"></video></div>
-  <div class="reel-card"><video controls muted loop playsinline src="videos/reel12.mp4"></video></div> 
-  <div class="reel-card"><video controls muted loop playsinline src="videos/reel13.mp4"></video></div>
-  <div class="reel-card"><video controls muted loop playsinline src="videos/reel14.mp4"></video></div>
-  <div class="reel-card"><video controls muted loop playsinline src="videos/reel15.mp4"></video></div>
-  <div class="reel-card"><video controls muted loop playsinline src="videos/reel16.mp4"></video></div>  
-  <div class="reel-card"><video controls muted loop playsinline src="videos/reel17.mp4"></video></div>
+<body>
+
+<div class="reels-container">
+
+  <div class="reel">
+    <video src="videos/reel1.mp4" playsinline></video>
+  </div>
+
+  <div class="reel">
+    <video src="videos/reel2.mp4" playsinline></video>
+  </div>
+
+  <div class="reel">
+    <video src="videos/reel3.mp4" playsinline></video>
+  </div>
+    <div class="reel">
+    <video src="videos/reel4.mp4" playsinline></video>
+  </div>
+
+  <div class="reel">
+    <video src="videos/reel5.mp4" playsinline></video>
+  </div>
+
+  <div class="reel">
+    <video src="videos/reel6.mp4" playsinline></video>
+  </div>
+    <div class="reel">
+    <video src="videos/reel7.mp4" playsinline></video>
+  </div>
+
+  <div class="reel">
+    <video src="videos/reel8.mp4" playsinline></video>
+  </div>
+
+  <div class="reel">
+    <video src="videos/reel9.mp4" playsinline></video>
+  </div>
+    <div class="reel">
+    <video src="videos/reel10.mp4" playsinline></video>
+  </div>
+
+  <div class="reel">
+    <video src="videos/reel12.mp4" playsinline></video>
+  </div>
+
+  <div class="reel">
+    <video src="videos/reel13.mp4" playsinline></video>
+  </div>
+    <div class="reel">
+    <video src="videos/reel11.mp4" playsinline></video>
+  </div>
+
+  <div class="reel">
+    <video src="videos/reel14.mp4" playsinline></video>
+  </div>
+
+  <div class="reel">
+    <video src="videos/reel315.mp4" playsinline></video>
+  </div>  
+  <div class="reel">
+    <video src="videos/reel16.mp4" playsinline></video>
+  </div>
+
+  <div class="reel">
+    <video src="videos/reel17.mp4" playsinline></video>
+  </div>
+
   
-  <!-- Add up to 20 reels by copying above line -->
+
+  <!-- Add more reels here -->
+
 </div>
+
+<script>
+const videos = document.querySelectorAll("video");
+
+function stopAllExcept(current){
+  videos.forEach(v => {
+    if(v !== current){
+      v.pause();
+      v.muted = true;
+    }
+  });
+}
+
+videos.forEach(video => {
+
+  video.addEventListener("click", () => {
+    stopAllExcept(video);
+    video.muted = false;
+    video.play();
+  });
+
+});
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const video = entry.target.querySelector("video");
+    if(entry.isIntersecting){
+      stopAllExcept(video);
+      video.muted = false;
+      video.play();
+    }else{
+      video.pause();
+      video.muted = true;
+    }
+  });
+},{threshold:0.8});
+
+document.querySelectorAll(".reel").forEach(reel => {
+  observer.observe(reel);
+});
+</script>
 
 </body>
 </html>
