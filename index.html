@@ -4,185 +4,143 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nabinagar Bazar – Local Fashion Marketplace</title>
+
 <style>
-  body { margin:0; font-family: Arial, sans-serif; background:#f7f7f7; }
-  header { background:#fff; padding:12px 16px; display:flex; align-items:center; justify-content:space-between; box-shadow:0 2px 6px rgba(0,0,0,.08); }
-  header img { height:50px; }
-  header input { flex:1; margin: 0 12px; padding:8px; border-radius:6px; border:1px solid #ddd; }
-  .btn { background:#0a7d3b; color:#fff; border:none; padding:8px 12px; border-radius:6px; cursor:pointer; }
-
-  .banner-wrapper {
-  width: 100%;
-  max-width: 1400px;   /* controls desktop width */
-  margin: 0 auto;     /* center on desktop */
-  padding: 12px;
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#f7f7f7;
 }
 
-.banner-wrapper img {
-  width: 100%;
-  height: auto;       /* keeps correct ratio */
-  display: block;
-  border-radius: 16px;
-}
-  .banner-wrapper {
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 12px;
-}
-
-.banner-content {
-  position: relative;
-}
-
-.banner-content img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 16px;
-}
-
-/* CTA Buttons */
-.banner-cta {
-  position: absolute;
-  bottom: 16px;
-  right: 16px;
-  display: flex;
-  gap: 10px;
-}
-
-.cta-btn {
-  background: #0a7d3b;
-  color: #fff;
-  padding: 10px 16px;
-  border-radius: 20px;
-  font-size: 14px;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.cta-btn.secondary {
-  background: rgba(255,255,255,0.9);
-  color: #0a7d3b;
-  border: 1px solid #0a7d3b;
-}
-
-/* Mobile adjustment */
-@media (max-width: 600px) {
-  .banner-cta {
-    position: static;
-    margin-top: 12px;
-    justify-content: center;
-  }
-}
-
-
-  .reels { display:flex; gap:12px; padding:0 16px 16px; overflow-x:auto; }
-  .reel { min-width:160px; height:220px; background:#aaa; color:#fff; display:flex; align-items:flex-end; padding:10px; border-radius:12px; font-weight:bold; }
-  .reels-scroll{
+/* Header */
+header{
+  background:#fff;
+  padding:12px 16px;
   display:flex;
+  align-items:center;
   gap:12px;
-  overflow-x:auto;
-  scroll-snap-type:x mandatory;
-  padding-bottom:8px;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
 }
 
-.reels-scroll video{
-  flex:0 0 30%;
-  max-width:30%;
-  aspect-ratio:9/16;
-  border-radius:12px;
-  object-fit:cover;
-  background:#000;
-  scroll-snap-align:start;
+header img{
+  height:45px;
 }
 
-/* Mobile adjustment */
-@media(max-width:600px){
-  .reels-scroll video{
-    flex:0 0 70%;
-    max-width:70%;
-  }
+header strong{
+  font-size:18px;
 }
 
-.shop-now-btn {
-  display: inline-block;
-  background: #0a7d3b;
-  color: #fff;
-  padding: 14px 28px;
-  border-radius: 30px;
-  font-size: 18px;
-  font-weight: 600;
-  text-decoration: none;
+/* Banner */
+.banner-wrapper{
+  max-width:1400px;
+  margin:0 auto;
+  padding:12px;
 }
 
-.shop-now-btn:hover {
-  background: #086b32;
+.banner-wrapper img{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:16px;
 }
 
-  .categories { display:flex; gap:10px; padding:0 16px 16px; overflow-x:auto; }
-  .category { background:#fff; padding:8px 14px; border-radius:20px; box-shadow:0 1px 4px rgba(0,0,0,.08); cursor:pointer; }
+/* Home content */
+.home-content{
+  text-align:center;
+  padding:24px 16px;
+}
 
-  footer { text-align:center; padding:20px; font-size:13px; color:#777; }
-  .floating-reels-btn{
-  position:fixed;
-  bottom:20px;
-  right:20px;
+.home-content h1{
+  font-size:24px;
+  margin-bottom:8px;
+}
+
+.home-content p{
+  color:#555;
+  margin-bottom:24px;
+}
+
+/* Buttons */
+.home-buttons{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
+.btn{
   background:#0a7d3b;
   color:#fff;
-  padding:14px 18px;
-  border-radius:50px;
+  padding:14px 26px;
+  border-radius:30px;
+  font-size:16px;
   font-weight:600;
   text-decoration:none;
-  box-shadow:0 4px 10px rgba(0,0,0,0.3);
-  z-index:999;
 }
 
+.btn.secondary{
+  background:#fff;
+  color:#0a7d3b;
+  border:2px solid #0a7d3b;
+}
+
+/* Trust section */
+.trust{
+  background:#fff;
+  margin:24px 16px;
+  padding:18px;
+  border-radius:12px;
+  max-width:800px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.trust p{
+  margin:8px 0;
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:20px;
+  font-size:13px;
+  color:#777;
+}
 </style>
 </head>
+
 <body>
 
+<!-- Header -->
 <header>
-  <!-- Logo: Replace src with your logo image link -->
-  <img src="image/logo.png" alt="Nabinagar Bazar Logo" />
-  <input placeholder="Search products… / পণ্য খুঁজুন" />
-  <a href="login.html"><button class="btn"> Cusomer Login</button></a>
- </header>
+  <img src="image/logo.png" alt="Nabinagar Bazar Logo">
+  <strong>Nabinagar Bazar</strong>
+</header>
 
+<!-- Banner -->
 <div class="banner-wrapper">
-  <div class="banner-content">
-    <img src="image/banner2.jpg" alt="Nabinagar Bazar Banner">
-
-    <div class="banner-cta">
-      <a href="become-seller.html" class="cta-btn secondary">Become a Seller</a>
-    </div>
-  </div>
-</div>
-<div style="text-align:center; padding:24px;">
-  <a href="product.html" class="shop-now-btn">
-    🛒 Shop Now
-  </a>
+  <img src="image/banner2.jpg" alt="Nabinagar Bazar Banner">
 </div>
 
+<!-- Main message -->
+<div class="home-content">
+  <h1>Everything you need, anytime, anywhere.</h1>
+  <p>Nabinagar er local online bazar</p>
 
-
- <!-- Reels: Replace content with real products or reels images -->
-<section style="padding:16px;">
-  <h3>Trending Reels 🔥</h3>
-
-  <div class="reels-scroll">
-    <video src="videos/reel1.mp4" muted loop controls playsinline></video>
-    <video src="videos/reel2.mp4" muted loop controls playsinline></video>
-    <video src="videos/reel3.mp4" muted loop controls playsinline></video>
-    <video src="videos/reel4.mp4" muted loop controls playsinline></video>
+  <div class="home-buttons">
+    <a href="product.html" class="btn">🛒 Shop Now</a>
+    <a href="become-seller.html" class="btn secondary">🏪 Become a Seller</a>
   </div>
+</div>
 
-  <div style="text-align:center;margin-top:12px;">
-   <a href="reels.html" class="floating-reels-btn"> View All</a>
+<!-- Trust points -->
+<div class="trust">
+  <p>✔ Local verified shops</p>
+  <p>✔ Cash on delivery available</p>
+  <p>✔ Easy order with mobile</p>
+</div>
 
-    </a>
-  </div>
-</section>
+<!-- Footer -->
 <footer>
   © 2026 Nabinagar Bazar · লোকাল দোকান, এক বাজার <br>
   Contact: meraihan5656@gmail.com
