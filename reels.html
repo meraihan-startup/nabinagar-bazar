@@ -30,6 +30,22 @@ body{
   height:100%;
   object-fit:cover;
 }
+  .reel-actions{
+  position:absolute;
+  right:12px;
+  bottom:120px;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  font-size:22px;
+  color:#fff;
+}
+
+.reel-actions div{
+  cursor:pointer;
+  user-select:none;
+}
+
 </style>
 </head>
 
@@ -38,32 +54,71 @@ body{
 <div class="reels-container">
 
   <div class="reel">
-    <video src="videos/reel1.mp4" playsinline></video>
+  <div class="reel-actions">
+    <div class="like">❤️ <span>0</span></div>
+    <div class="share">🔗</div>
+  </div>
+<video src="videos/reel1.mp4" playsinline></video>
   </div>
 
-  <div class="reel">
+ <div class="reel">
+  <div class="reel-actions">
+    <div class="like">❤️ <span>0</span></div>
+    <div class="share">🔗</div>
+  </div>
+
     <video src="videos/reel2.mp4" playsinline></video>
   </div>
 
   <div class="reel">
+  <div class="reel-actions">
+    <div class="like">❤️ <span>0</span></div>
+    <div class="share">🔗</div>
+  </div>
+
     <video src="videos/reel3.mp4" playsinline></video>
   </div>
     <div class="reel">
+  <div class="reel-actions">
+    <div class="like">❤️ <span>0</span></div>
+    <div class="share">🔗</div>
+  </div>
+
     <video src="videos/reel4.mp4" playsinline></video>
   </div>
 
   <div class="reel">
+  <div class="reel-actions">
+    <div class="like">❤️ <span>0</span></div>
+    <div class="share">🔗</div>
+  </div>
+
     <video src="videos/reel5.mp4" playsinline></video>
   </div>
 
-  <div class="reel">
+<div class="reel">
+  <div class="reel-actions">
+    <div class="like">❤️ <span>0</span></div>
+    <div class="share">🔗</div>
+  </div>
+
     <video src="videos/reel6.mp4" playsinline></video>
   </div>
     <div class="reel">
+  <div class="reel-actions">
+    <div class="like">❤️ <span>0</span></div>
+    <div class="share">🔗</div>
+  </div>
+
     <video src="videos/reel7.mp4" playsinline></video>
   </div>
 
   <div class="reel">
+  <div class="reel-actions">
+    <div class="like">❤️ <span>0</span></div>
+    <div class="share">🔗</div>
+  </div>
+
     <video src="videos/reel8.mp4" playsinline></video>
   </div>
 
@@ -71,32 +126,72 @@ body{
     <video src="videos/reel9.mp4" playsinline></video>
   </div>
     <div class="reel">
+  <div class="reel-actions">
+    <div class="like">❤️ <span>0</span></div>
+    <div class="share">🔗</div>
+  </div>
+
     <video src="videos/reel10.mp4" playsinline></video>
   </div>
 
   <div class="reel">
+  <div class="reel-actions">
+    <div class="like">❤️ <span>0</span></div>
+    <div class="share">🔗</div>
+  </div>
+
     <video src="videos/reel12.mp4" playsinline></video>
   </div>
 
   <div class="reel">
+  <div class="reel-actions">
+    <div class="like">❤️ <span>0</span></div>
+    <div class="share">🔗</div>
+  </div>
+
     <video src="videos/reel13.mp4" playsinline></video>
   </div>
     <div class="reel">
+  <div class="reel-actions">
+    <div class="like">❤️ <span>0</span></div>
+    <div class="share">🔗</div>
+  </div>
+
     <video src="videos/reel11.mp4" playsinline></video>
   </div>
 
   <div class="reel">
+  <div class="reel-actions">
+    <div class="like">❤️ <span>0</span></div>
+    <div class="share">🔗</div>
+  </div>
+
     <video src="videos/reel14.mp4" playsinline></video>
   </div>
 
-  <div class="reel">
+<div class="reel">
+  <div class="reel-actions">
+    <div class="like">❤️ <span>0</span></div>
+    <div class="share">🔗</div>
+  </div>
+
     <video src="videos/reel315.mp4" playsinline></video>
   </div>  
   <div class="reel">
+  <div class="reel-actions">
+    <div class="like">❤️ <span>0</span></div>
+    <div class="share">🔗</div>
+  </div>
+
     <video src="videos/reel16.mp4" playsinline></video>
   </div>
 
-  <div class="reel">
+<div class="reel">
+  <div class="reel-actions">
+    <div class="like">❤️ <span>0</span></div>
+    <div class="share">🔗</div>
+  </div>
+
     <video src="videos/reel17.mp4" playsinline></video>
   </div>
 
@@ -167,6 +262,21 @@ reels.forEach((reel, index) => {
       // Left tap → previous
       scrollToReel(index - 1);
     }
+  });
+});
+document.querySelectorAll(".like").forEach(likeBtn => {
+  let count = 0;
+  likeBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    count++;
+    likeBtn.querySelector("span").innerText = count;
+  });
+});
+
+document.querySelectorAll(".share").forEach(shareBtn => {
+  shareBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    alert("Share feature coming soon!");
   });
 });
 
