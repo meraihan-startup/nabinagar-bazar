@@ -24,6 +24,58 @@
   display: block;
   border-radius: 16px;
 }
+  .banner-wrapper {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 12px;
+}
+
+.banner-content {
+  position: relative;
+}
+
+.banner-content img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+}
+
+/* CTA Buttons */
+.banner-cta {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  display: flex;
+  gap: 10px;
+}
+
+.cta-btn {
+  background: #0a7d3b;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.cta-btn.secondary {
+  background: rgba(255,255,255,0.9);
+  color: #0a7d3b;
+  border: 1px solid #0a7d3b;
+}
+
+/* Mobile adjustment */
+@media (max-width: 600px) {
+  .banner-cta {
+    position: static;
+    margin-top: 12px;
+    justify-content: center;
+  }
+}
+
 
 
   .reels { display:flex; gap:12px; padding:0 16px 16px; overflow-x:auto; }
@@ -62,8 +114,16 @@
 </header>
 
 <div class="banner-wrapper">
-  <img src="image/banner2.jpg" alt="Nabinagar Bazar Banner">
+  <div class="banner-content">
+    <img src="image/banner2.jpg" alt="Nabinagar Bazar Banner">
+
+    <div class="banner-cta">
+      <a href="product.html" class="cta-btn">Shop Now</a>
+      <a href="become-seller.html" class="cta-btn secondary">Become a Seller</a>
+    </div>
+  </div>
 </div>
+
 
 
  <!-- Reels: Replace content with real products or reels images -->
