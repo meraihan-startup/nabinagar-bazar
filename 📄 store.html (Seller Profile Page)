@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Store – Nabinagar Bazar</title>
+<style>
+body{margin:0;font-family:Arial;background:#f6f6f6;}
+header{background:#0a7d3b;color:#fff;padding:16px;}
+.section{background:#fff;margin:12px;padding:12px;border-radius:8px;}
+.products{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
+.card{background:#eee;padding:8px;border-radius:8px;}
+.img{height:100px;background:#ccc;border-radius:6px;margin-bottom:6px;}
+</style>
+</head>
+<body>
+
+<header>
+<h2>Bhai Bhai Fashion</h2>
+<p>Nabinagar, Brahmanbaria</p>
+<p>⭐ 4.6 · Verified Local Seller / যাচাইকৃত দোকান </p>
+</header>
+
+<div class="section">
+<h3>Products</h3>
+<div class="products">
+  <a href="product.html" style="text-decoration:none;color:inherit;">
+    <div class="card"><div class="img"></div>Casual Shirt<br>৳850</div>
+  </a>
+  <div class="card"><div class="img"></div>Panjabi<br>৳1200</div>
+</div>
+</div>
+
+<div class="section">
+<h3> About Store / দোকানের তথ্য </h3>
+<p>Local fashion store serving Nabinagar customers.</p>
+</div>
+
+</body>
+</html>
