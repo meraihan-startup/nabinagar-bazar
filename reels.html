@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reels – Nabinagar Bazar</title>
+<style>
+body{margin:0;font-family:Arial;background:#f6f6f6}
+header{padding:16px;text-align:center;background:#0a7d3b;color:#fff}
+.reels-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:12px;
+  padding:16px;
+  max-width:1200px;
+  margin:0 auto;
+}
+.reel-card video{
+  width:100%;
+  aspect-ratio:9/16;
+  object-fit:cover;
+  border-radius:12px;
+  background:#000;
+}
+</style>
+</head>
+<body>
+<header>
+<h2>Trending Reels 🎬</h2>
+<p>সব দোকানের ভিডিও এক জায়গায়</p>
+</header>
+
+<div class="reels-grid">
+  <div class="reel-card"><video controls muted loop playsinline src="videos/reel1.mp4"></video></div>
+  <div class="reel-card"><video controls muted loop playsinline src="videos/reel2.mp4"></video></div>
+  <div class="reel-card"><video controls muted loop playsinline src="videos/reel3.mp4"></video></div>
+  <div class="reel-card"><video controls muted loop playsinline src="videos/reel4.mp4"></video></div>
+  <!-- Add up to 20 reels by copying above line -->
+</div>
+
+</body>
+</html>
