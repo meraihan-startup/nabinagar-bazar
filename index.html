@@ -1,60 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nabinagar Bazar – Local Fashion Marketplace</title>
-  <style>
-    body { margin:0; font-family:Arial,sans-serif; background:#f8f8f8; }
-    header { background:#fff; padding:12px 16px; display:flex; gap:10px; align-items:center; box-shadow:0 2px 6px rgba(0,0,0,.08); }
-    header h1 { font-size:18px; margin:0; }
-    header input { flex:1; padding:8px; border-radius:6px; border:1px solid #ddd; }
-    .btn { background:#0a7d3b; color:#fff; border:none; padding:8px 12px; border-radius:6px; }
-    .reels { display:flex; gap:12px; padding:16px; overflow-x:auto; }
-    .reel { min-width:160px; height:220px; background:#000; color:#fff; display:flex; align-items:flex-end; padding:10px; border-radius:12px; }
-    .categories { display:flex; gap:10px; padding:0 16px 16px; overflow-x:auto; }
-    .category { background:#fff; padding:8px 14px; border-radius:20px; box-shadow:0 1px 4px rgba(0,0,0,.08); }
-    .products { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; padding:16px; }
-    .product { background:#fff; padding:10px; border-radius:12px; box-shadow:0 2px 6px rgba(0,0,0,.08); }
-    .img { height:140px; background:#ddd; border-radius:10px; margin-bottom:8px; }
-    footer { text-align:center; padding:20px; font-size:13px; color:#777; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nabinagar Bazar – Local Fashion Marketplace</title>
+<style>
+  body { margin:0; font-family: Arial, sans-serif; background:#f7f7f7; }
+  header { background:#fff; padding:12px 16px; display:flex; align-items:center; justify-content:space-between; box-shadow:0 2px 6px rgba(0,0,0,.08); }
+  header img { height:50px; }
+  header input { flex:1; margin: 0 12px; padding:8px; border-radius:6px; border:1px solid #ddd; }
+  .btn { background:#0a7d3b; color:#fff; border:none; padding:8px 12px; border-radius:6px; cursor:pointer; }
+
+  .banner { width:100%; height:200px; background:#ccc; display:flex; align-items:center; justify-content:center; color:#555; font-size:20px; margin-bottom:16px; }
+
+  .reels { display:flex; gap:12px; padding:0 16px 16px; overflow-x:auto; }
+  .reel { min-width:160px; height:220px; background:#aaa; color:#fff; display:flex; align-items:flex-end; padding:10px; border-radius:12px; font-weight:bold; }
+
+  .categories { display:flex; gap:10px; padding:0 16px 16px; overflow-x:auto; }
+  .category { background:#fff; padding:8px 14px; border-radius:20px; box-shadow:0 1px 4px rgba(0,0,0,.08); cursor:pointer; }
+
+  .products { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; padding:0 16px 16px; }
+  .product { background:#fff; padding:10px; border-radius:12px; box-shadow:0 2px 6px rgba(0,0,0,.08); cursor:pointer; text-decoration:none; color:inherit; }
+  .product-img { height:140px; background:#ddd; border-radius:10px; margin-bottom:8px; }
+
+  footer { text-align:center; padding:20px; font-size:13px; color:#777; }
+</style>
 </head>
 <body>
 
 <header>
-  <h1><div class="Nabinagar Bazar">
-  <a href="index.html" style="color:#fff; text-decoration:none;">Nabinagar Bazar</a>
-</div></h1>
+  <!-- Logo: Replace src with your logo image link -->
+  <img src="" alt="Nabinagar Bazar Logo" />
   <input placeholder="Search products… / পণ্য খুঁজুন" />
-  <a href="login.html"><button class="btn">Login</button></a>
+  <a href="login.html"><button class="btn">Login / লগইন</button></a>
 </header>
 
+<!-- Banner: Replace content or background image -->
+<div class="banner">Banner / Your Shop Banner Here</div>
+
+<!-- Reels: Replace content with real products or reels images -->
 <section class="reels">
-  <div class="reel">Panjabi ৳1200</div>
-  <div class="reel">Shirt ৳850</div>
-  <div class="reel">Saree ৳3200</div>
+  <div class="reel">Demo Dress 1</div>
+  <div class="reel">Demo Dress 2</div>
+  <div class="reel">Demo Dress 3</div>
+  <div class="reel">Demo Dress 4</div>
 </section>
 
+<!-- Categories -->
 <section class="categories">
-  <div class="category">Shirt</div>
-  <div class="category">Saree</div>
-  <div class="category">Panjabi</div>
-  <div class="category">T‑Shirt</div>
+  <div class="category">Shirt / শার্ট</div>
+  <div class="category">Saree / শাড়ি</div>
+  <div class="category">Panjabi / পাঞ্জাবি</div>
+  <div class="category">T-Shirt / টি-শার্ট</div>
 </section>
 
+<!-- Products grid: Replace with demo product images -->
 <section class="products">
-  <a href="product.html" style="text-decoration:none;color:inherit;">
+  <a href="product.html">
     <div class="product">
-      <div class="img"></div>
+      <div class="product-img">Demo Dress 1</div>
       Men Casual Shirt<br><b>৳850</b><br><small>Bhai Bhai Fashion</small>
     </div>
   </a>
-  <div class="product"><div class="img"></div>Panjabi<br><b>৳1200</b></div>
+  <a href="product.html">
+    <div class="product">
+      <div class="product-img">Demo Dress 2</div>
+      Premium Panjabi<br><b>৳1200</b>
+    </div>
+  </a>
+  <a href="product.html">
+    <div class="product">
+      <div class="product-img">Demo Dress 3</div>
+      Cotton T-Shirt<br><b>৳550</b>
+    </div>
+  </a>
+  <a href="product.html">
+    <div class="product">
+      <div class="product-img">Demo Dress 4</div>
+      Formal Shirt<br><b>৳950</b>
+    </div>
+  </a>
 </section>
 
 <footer>
   © 2026 Nabinagar Bazar · লোকাল দোকান, এক বাজার
+  contact: meraihan5656@gmail.com
 </footer>
 
 </body>
