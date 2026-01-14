@@ -79,6 +79,32 @@
 
   .reels { display:flex; gap:12px; padding:0 16px 16px; overflow-x:auto; }
   .reel { min-width:160px; height:220px; background:#aaa; color:#fff; display:flex; align-items:flex-end; padding:10px; border-radius:12px; font-weight:bold; }
+  .reels-scroll{
+  display:flex;
+  gap:12px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  padding-bottom:8px;
+}
+
+.reels-scroll video{
+  flex:0 0 30%;
+  max-width:30%;
+  aspect-ratio:9/16;
+  border-radius:12px;
+  object-fit:cover;
+  background:#000;
+  scroll-snap-align:start;
+}
+
+/* Mobile adjustment */
+@media(max-width:600px){
+  .reels-scroll video{
+    flex:0 0 70%;
+    max-width:70%;
+  }
+}
+
 .shop-now-btn {
   display: inline-block;
   background: #0a7d3b;
@@ -114,7 +140,6 @@
     <img src="image/banner2.jpg" alt="Nabinagar Bazar Banner">
 
     <div class="banner-cta">
-      <a href="product.html" class="cta-btn">Shop Now</a>
       <a href="become-seller.html" class="cta-btn secondary">Become a Seller</a>
     </div>
   </div>
@@ -131,33 +156,20 @@
 <section style="padding:16px;">
   <h3>Trending Reels 🔥</h3>
 
-  <div style="display:flex;gap:12px;overflow-x:auto;">
+  <div class="reels-scroll">
+    <video src="videos/reel1.mp4" muted loop controls playsinline></video>
+    <video src="videos/reel2.mp4" muted loop controls playsinline></video>
+    <video src="videos/reel3.mp4" muted loop controls playsinline></video>
+    <video src="videos/reel4.mp4" muted loop controls playsinline></video>
+  </div>
 
-    <video width="200" height="350" controls muted loop>
-      <source src="videos/reel1.mp4" type="video/mp4">
-    </video>
-
-    <video width="200" height="350" controls muted loop>
-      <source src="videos/reel2.mp4" type="video/mp4">
-    </video>
-
-    <video width="200" height="350" controls muted loop>
-      <source src="videos/reel3.mp4" type="video/mp4">
-    </video>
-    <video width="200" height="350" controls muted loop>
-      <source src="videos/reel4.mp4" type="video/mp4">
-    </video>
-
-    <video width="200" height="350" controls muted loop>
-      <source src="videos/reel2.mp4" type="video/mp4">
-    </video>
-
-    <video width="200" height="350" controls muted loop>
-      <source src="videos/reel3.mp4" type="video/mp4">
-    </video>
-
+  <div style="text-align:center;margin-top:12px;">
+    <a href="reels.html" style="text-decoration:none;color:#0a7d3b;font-weight:600;">
+      View All Reels →
+    </a>
   </div>
 </section>
+
 
 
 <!-- Categories -->
