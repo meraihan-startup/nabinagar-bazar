@@ -145,6 +145,31 @@ const observer = new IntersectionObserver(entries => {
 document.querySelectorAll(".reel").forEach(reel => {
   observer.observe(reel);
 });
+  let currentIndex = 0;
+const reels = document.querySelectorAll(".reel");
+
+function scrollToReel(index){
+  if(index >= 0 && index < reels.length){
+    reels[index].scrollIntoView({behavior:"smooth"});
+    currentIndex = index;
+  }
+}
+
+reels.forEach((reel, index) => {
+  reel.addEventListener("click", (e) => {
+    const screenWidth = window.innerWidth;
+    const clickX = e.clientX;
+
+    if(clickX > screenWidth / 2){
+      // Right tap → next
+      scrollToReel(index + 1);
+    }else{
+      // Left tap → previous
+      scrollToReel(index - 1);
+    }
+  });
+});
+
 </script>
 
 </body>
