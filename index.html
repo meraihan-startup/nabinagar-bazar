@@ -76,72 +76,26 @@
   }
 }
 
-.products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 14px;
-  padding: 16px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.product {
-  background: #fff;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-}
-
-.product-img {
-  width: 100%;
-  aspect-ratio: 4 / 4; /* PERFECT square */
-  background: #f2f2f2;
-}
-
-.product-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;   /* NO distortion */
-  display: block;
-}
-
-.product-info {
-  padding: 10px;
-  text-align: center;
-}
-
-.product-name {
-  font-size: 14px;
-  margin: 4px 0;
-}
-
-.product-price {
-  font-weight: bold;
-  color: #0a7d3b;
-}
-
 
   .reels { display:flex; gap:12px; padding:0 16px 16px; overflow-x:auto; }
   .reel { min-width:160px; height:220px; background:#aaa; color:#fff; display:flex; align-items:flex-end; padding:10px; border-radius:12px; font-weight:bold; }
+.shop-now-btn {
+  display: inline-block;
+  background: #0a7d3b;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.shop-now-btn:hover {
+  background: #086b32;
+}
 
   .categories { display:flex; gap:10px; padding:0 16px 16px; overflow-x:auto; }
   .category { background:#fff; padding:8px 14px; border-radius:20px; box-shadow:0 1px 4px rgba(0,0,0,.08); cursor:pointer; }
-
-  ..products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 12px;
-  padding: 16px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-  .product {
-  background: #fff;
-  border-radius: 10px;
-  padding: 10px;
-  text-align: center;
-}
-  .product-img { height:140px; background:#ddd; border-radius:10px; margin-bottom:8px; }
 
   footer { text-align:center; padding:20px; font-size:13px; color:#777; }
 </style>
@@ -164,6 +118,11 @@
       <a href="become-seller.html" class="cta-btn secondary">Become a Seller</a>
     </div>
   </div>
+</div>
+<div style="text-align:center; padding:24px;">
+  <a href="product.html" class="shop-now-btn">
+    🛒 Shop Now
+  </a>
 </div>
 
 
@@ -209,37 +168,7 @@
   <div class="category">T-Shirt / টি-শার্ট</div>
 </section>
 
-<!-- Products grid: Replace with demo product images -->
-<section class="products">
-  <a href="product.html">
-    <div class="product">
-      <div class="product-img"><img src="image/dress1.jpg" alt="Demo Dress 1" style="width:100%; height:100%; object-fit:cover; border-radius:10px;" /></div>
-      Men Casual Shirt<br><b>৳850</b></a>
-  <br><small> <a href="store-bhai-bhai.html">🏪 Bhai Bhai Fashion</a></small>
-    </div>
-  
-  <a href="product.html">
-    <div class="product">
-      <div class="product-img"><img src="image/dress2.jpg" alt="Demo Dress 2" style="width:100%; height:100%; object-fit:cover; border-radius:10px;" /></div>
-      Premium Panjabi<br><b>৳1200</b></a>
-  <br><a href="store-eid-fashion.html">🏪 Eid Fashion Corner</a>
-    </div>
-  
-  <a href="product.html">
-    <div class="product">
-      <div class="product-img"><img src="image/dress3.jpg" alt="Demo Dress 3" style="width:100%; height:100%; object-fit:cover; border-radius:10px;" /></div>
-      Cotton T-Shirt<br><b>৳550</b></a>
-  <br><small> <a href="store-bhai-bhai.html">🏪 Bhai Bhai Fashion</a></small>
-    </div>
-  
-  <a href="product.html">
-    <div class="product">
-      <div class="product-img"><img src="image/dress5.jpg" alt="Demo Dress 4" style="width:100%; height:100%; object-fit:cover; border-radius:10px;" /></div>
-      Silk Saree<br><b>৳1499</b></a>
-  <br><small> <a href="store-saree-house.html">🏪 Nabinagar Saree House</a></small>
-    </div>
 
-</section>
      
 
 
