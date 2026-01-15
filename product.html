@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Products – Nabinagar Bazar</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#f6f6f6;
+}
+
+/* Header */
+header{
+  background:#fff;
+  padding:12px 16px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+
+header a{
+  text-decoration:none;
+  color:#0a7d3b;
+  font-weight:600;
+}
+
+header h2{
+  margin:0 auto;
+  font-size:18px;
+}
+
+/* Categories */
+.categories{
+  display:flex;
+  gap:10px;
+  padding:12px 16px;
+  overflow-x:auto;
+}
+
+.category{
+  background:#fff;
+  padding:8px 14px;
+  border-radius:20px;
+  box-shadow:0 1px 4px rgba(0,0,0,.08);
+  white-space:nowrap;
+  font-size:14px;
+}
+
+/* Product grid */
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(160px,1fr));
+  gap:14px;
+  padding:16px;
+}
+
+.product-card{
+  background:#fff;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+
+.product-card img{
+  width:100%;
+  aspect-ratio:1/1.2;
+  object-fit:cover;
+}
+
+.product-info{
+  padding:10px;
+}
+
+.product-info h4{
+  margin:0 0 4px;
+  font-size:14px;
+}
+
+.price{
+  font-weight:700;
+  margin-bottom:4px;
+}
+
+.shop{
+  font-size:12px;
+}
+
+.shop a{
+  color:#0a7d3b;
+  text-decoration:none;
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:20px;
+  font-size:13px;
+  color:#777;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+  <a href="index.html">← Home</a>
+  <h2>All Products / সব পণ্য</h2>
+</header>
+
+<section class="categories">
+  <div class="category">All</div>
+  <div class="category">Shirt / শার্ট</div>
+  <div class="category">Saree / শাড়ি</div>
+  <div class="category">Panjabi / পাঞ্জাবি</div>
+  <div class="category">Three Piece</div>
+</section>
+
+<section class="products">
+
+  <!-- Product 1 -->
+
+  <div class="product-card">
+    <a href="store.html">
+      <img src="images/dress1.jpg" alt="Product">
+    </a>
+    <div class="product-info">
+      <h4>Men Casual Shirt</h4>
+      <div class="price">৳850</div>
+      <div class="shop">
+        <a href="store.html">Bhai Bhai Fashion</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 2 -->
+
+  <div class="product-card">
+    <a href="store.html">
+      <img src="images/dress2.jpg" alt="Product">
+    </a>
+    <div class="product-info">
+      <h4>Women Saree</h4>
+      <div class="price">৳2,200</div>
+      <div class="shop">
+        <a href="store.html">Maa Fashion House</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 3 -->
+
+  <div class="product-card">
+    <a href="store.html">
+      <img src="images/dress3.jpg" alt="Product">
+    </a>
+    <div class="product-info">
+      <h4>Panjabi Premium</h4>
+      <div class="price">৳1,500</div>
+      <div class="shop">
+        <a href="store.html">Rafiq Collection</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 4 -->
+
+  <div class="product-card">
+    <a href="store.html">
+      <img src="images/dress4.jpg" alt="Product">
+    </a>
+    <div class="product-info">
+      <h4>Three Piece Set</h4>
+      <div class="price">৳3,100</div>
+      <div class="shop">
+        <a href="store.html">Nabila Boutique</a>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  © 2026 Nabinagar Bazar · Local shops, one bazar
+</footer>
+
+</body>
+</html>
