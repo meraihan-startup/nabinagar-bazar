@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reels – Nabinagar Bazar</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#f7f7f7;
+}
+
+header{
+  background:#fff;
+  padding:12px;
+  text-align:center;
+  font-weight:bold;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+
+/* Reels Grid (like products) */
+.reels-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap:14px;
+  padding:16px;
+}
+
+/* Reel Card */
+.reel-card{
+  background:#000;
+  border-radius:14px;
+  overflow:hidden;
+  position:relative;
+}
+
+/* Video */
+.reel-card video{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+  cursor:pointer;
+}
+
+/* Play hint */
+.reel-hint{
+  position:absolute;
+  bottom:10px;
+  left:10px;
+  background:rgba(0,0,0,0.6);
+  color:#fff;
+  padding:4px 8px;
+  font-size:12px;
+  border-radius:8px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  ← <a href="index.html" style="text-decoration:none;color:#0a7d3b;">Back</a> | Reels
+</header>
+
+<section class="reels-grid">
+
+  <div class="reel-card">
+    <video src="videos/reel1.mp4" muted playsinline></video>
+    <div class="reel-hint">Tap to play</div>
+  </div>
+
+  <div class="reel-card">
+    <video src="videos/reel2.mp4" muted playsinline></video>
+    <div class="reel-hint">Tap to play</div>
+  </div>
+
+  <div class="reel-card">
+    <video src="videos/reel3.mp4" muted playsinline></video>
+    <div class="reel-hint">Tap to play</div>
+  </div>
+
+  <div class="reel-card">
+    <video src="videos/reel4.mp4" muted playsinline></video>
+    <div class="reel-hint">Tap to play</div>
+  </div>
+
+</section>
+
+<script>
+const videos = document.querySelectorAll("video");
+
+videos.forEach(video => {
+  video.addEventListener("click", () => {
+
+    // Pause & mute all others
+    videos.forEach(v => {
+      if(v !== video){
+        v.pause();
+        v.muted = true;
+      }
+    });
+
+    // Toggle play for clicked video
+    if(video.paused){
+      video.play();
+      video.muted = false;
+    } else {
+      video.pause();
+      video.muted = true;
+    }
+  });
+});
+</script>
+
+</body>
+</html>
